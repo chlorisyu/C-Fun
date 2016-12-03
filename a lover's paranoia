@@ -1,0 +1,31 @@
+Struct Composition{
+float sincerity;
+float courage;
+float belief;
+};
+bool valid_love (Composition today, Composition &tomorrow)
+{
+bool valid = true;
+int love_level=9;
+int i,g;
+if (tomorrow.sincerity > today.sincerity) {
+love_level = love_level +1;
+cout<<"u will probably be married off b4 u die"<<endl;}
+valid=true;
+if (tomorrow.sincerity < today.sincerity) {
+love_level = love_level -1;
+cout>>"oops, watch out">>endl;
+   if (tomorrow.courage > today.courage || tomorrow.belief > today.belief){
+       cout <<"enter ur level of regrets and willingness for some remedy"<<endl;
+       cin>> i;
+       love_level = love_level + i;}
+   else{cout<<"enter the level of frustration and enter a number more than 10 if u wanna give up"<<endl;
+       cin>> g;
+       love_level = love_level -g;}
+       cout<<" love level:"<<love_level<<endl;
+            if(love_level >0){cout<< "DANGER! but u may still have chance if u believe in it"<<endl; }           
+           else {cout<<"u are really doomed!... <<endl;
+valid=false;}
+}
+return valid;
+}
